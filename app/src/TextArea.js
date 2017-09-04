@@ -1,19 +1,32 @@
 import React, { Component } from 'react';
-import TextField from 'material-ui/TextField';
+import {
+  FormGroup,
+  ControlLabel,
+  FormControl,
+  Navbar
+  } from 'react-bootstrap';
 
 export default class TextArea extends Component {
   constructor(props) {
     super(props);
-    this.ChangeInValue = this.ChangeInValue.bind(this);
+    this.changeInText = this.changeInText.bind(this);
   }
 
-  ChangeInValue(value) {
-    this.props.onChangeValue(value);
+  changeInText(e) {
+    this.props.onTextChange(e.target.value);
   }
 
   render() {
     return (
-      
+      <form>
+        <FormGroup controlId="formControlsTextarea">
+         <FormControl
+           componentClass="textarea"
+           value={this.props.value}
+           onChange={this.changeInText}
+         />
+        </FormGroup>
+      </form>
     );
   }
 }

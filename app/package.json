@@ -9,6 +9,7 @@
     "grunt-contrib-watch": "^1.0.0",
     "less-plugin-autoprefix": "^1.5.1",
     "less-plugin-clean-css": "^1.5.1",
+    "markdown": "^0.5.0",
     "markdown-react-js": "^0.3.0",
     "react": "^15.6.1",
     "react-bootstrap": "^0.31.2",
